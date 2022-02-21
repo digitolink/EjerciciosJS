@@ -5,7 +5,13 @@ const even = []
 for (let item of numbers) {
     console.log("item:", item);
 
-    // Put your code here
+    if(item%2===0){ 
+        odd.push(item);
+    }
+    else{
+        even.push(item);
+    }
+
 
 }
 
