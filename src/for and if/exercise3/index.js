@@ -3,7 +3,7 @@ let sum = 0;
 let average = 0;
 let counter=0;
 
-for (item of numbers){
+for (let item of numbers){
     sum+=item;
     counter+=1;
 }
