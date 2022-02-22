@@ -5,7 +5,14 @@ const numbers4 = [22,9,6,8,5,7,8,9,12,11];
 
 function minorValue(array) {
 
-    // Put your code here
+    let aux=array[0];
+    for (let menor of array){
+        if (menor<aux)
+            aux=menor;
+    }
+    return aux;
+        
+    
 
 }
 
