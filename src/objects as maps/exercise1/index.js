@@ -1,15 +1,16 @@
 const phrase = "No hay bien que por mal no venga";
 const counters = {};
 function countLetter (letter, countersObject) {
-
-    // Put your code here
-
+    for(let i=0;i<phrase.length;i++){
+        letra=phrase[i];
+        if (counters[letra]===undefined)
+            countersObject[letra]=1;
+        else
+            countersObject[letra]=countersObject[letra]+1;
+    }
+    return countersObject;
 }
 
 
-for (letter of phrase) {
-    console.log(letter)
-    countLetter(letter, counters)
-}
+console.log(countLetter("a",counters));
 
-console.log(counters)
