@@ -52,8 +52,8 @@ sea undefined.
  * @returns {number} posmenor
  */
 function intercambiaMenor(arrayDeObjetos){
-    let menor=arrayDeObjetos[0].time;
-    //let posmenor=0;
+    let tiempoMenor=arrayDeObjetos[0].time;
+    let posmenor=0;
     for(let i=0;arrayDeObjetos[i+1]!=undefined;i++){
         objetoActual=arrayDeObjetos[i];
         objetoSiguiente=arrayDeObjetos[i+1];
@@ -61,17 +61,17 @@ function intercambiaMenor(arrayDeObjetos){
 
         if(objetoActual.time < objetoSiguiente.time){
             swap(i,i+1, arrayDeObjetos);
-            menor =arrayDeObjetos[i];
-            //posmenor=i;    
+            posmenor =i;    
          }
 
-         if(objetoFinal.time < menor){
-            swap(arrayDeObjetos.length-1, menor, arrayDeObjetos);
-            //posmenor=arrayDeObjetos.length;    
-         }
+    if(objetoFinal.time < tiempoMenor){
+        swap(arrayDeObjetos.length-1, posmenor, arrayDeObjetos);
+        posmenor=arrayDeObjetos.length;    
+    }
+    
     }
 
 }
 
-
+intercambiaMenor(chrono);
 console.log(JSON.stringify(chrono))
