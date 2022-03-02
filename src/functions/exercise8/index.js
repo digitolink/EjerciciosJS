@@ -1,22 +1,24 @@
 numbers = [4,2,9,6,1,0,3,6,5,2,9];
 
 function aGreatherThanB (a, b) {
-    // Put your code here
+    return (a>b);
 }
 
 function bGreatherThanA (a,b) {
-    // Put your code here
+    return (b>a);
 }
 
 function swap (idxA, idxB, array) {
-    // Put your code here
+    const temporal=array[idxA];
+    array[idxA]=array[idxB];
+    array[idxB]=temporal;
 }
 
 function sort (comparator, array) {
     for ( let currentIdx = 0 ; currentIdx < array.length-1 ; currentIdx++) {
         for ( let nextIdx = currentIdx+1 ; nextIdx < array.length ; nextIdx++ ) {
             if (
-                comparator(currentIdx, nextIdx)
+                comparator(array[currentIdx], array[nextIdx])
             ) swap (currentIdx, nextIdx, array)
         }
     }
