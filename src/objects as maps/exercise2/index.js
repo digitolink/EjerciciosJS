@@ -21,6 +21,7 @@ const chrono = [
     },
 ]
 
+<<<<<<< HEAD
 
 //funcion para intercambiar los valores entre 
 //dos posiciones cualesquiera de un array
@@ -75,3 +76,6 @@ function intercambiaMenor(arrayDeObjetos){
 
 intercambiaMenor(chrono);
 console.log(JSON.stringify(chrono))
+=======
+// Put you code here
+>>>>>>> 50fd7f85ca89e713a07b82bc743cc2a568848fc2
