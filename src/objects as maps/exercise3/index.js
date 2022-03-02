@@ -21,7 +21,38 @@ const people = [
     },
 ]
 
-// Your code here
 
-sort(aFasterThanB, numbers)
-sort(bFasterThanA, numbers)
+function aFasterThanB (a, b) {
+    return (a.time>b.time);
+}
+
+function bFasterThanA (a,b) {
+    return (b.time>a.time);
+}
+
+function swap (idxA, idxB, array) {
+    const temporal=array[idxA];
+    array[idxA]=array[idxB];
+    array[idxB]=temporal;
+}
+
+function sort (comparator, array) {
+    for ( let currentIdx = 0 ; currentIdx < array.length-1 ; currentIdx++) {
+        for ( let nextIdx = currentIdx+1 ; nextIdx < array.length ; nextIdx++ ) {
+            if (
+                comparator(array[currentIdx], array[nextIdx])
+            ) swap (currentIdx, nextIdx, array)
+        }
+    }
+}
+
+
+
+sort(aFasterThanB, people)
+for (indice in people)
+    console.log(people[indice]);
+sort(bFasterThanA, people)
+for (indice in people)
+    console.log(people[indice]);
+
+
